@@ -1,5 +1,6 @@
 package com.example.kotlin_binary_calculator
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -43,6 +44,9 @@ class MainActivity2 : AppCompatActivity() {
         btn_del.setOnClickListener {
             number = number.dropLast(1)
             txt_disp.setText(number)
+        }
+        nav.setOnClickListener {
+            startActivity(Intent (this, MainActivity::class.java))
         }
     }
 }
