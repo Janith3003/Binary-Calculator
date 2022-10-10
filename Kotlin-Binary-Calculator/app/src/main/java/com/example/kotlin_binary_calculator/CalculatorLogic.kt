@@ -43,5 +43,5 @@ class CalculatorLogic {
         }
         return (total.toString());
     }
-    
+
 }
