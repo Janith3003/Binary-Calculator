@@ -95,10 +95,10 @@ class MainActivity : AppCompatActivity() {
             txt_disp.setText(num)
         }
 
-//        nav.setOnClickListener {
-//            val intent = Intent(this,MainActivity2::class.java)
-//            startActivity(intent)
-//        }
+        nav.setOnClickListener {
+            val intent = Intent(this,MainActivity2::class.java)
+            startActivity(intent)
+        }
 
     }
 }
