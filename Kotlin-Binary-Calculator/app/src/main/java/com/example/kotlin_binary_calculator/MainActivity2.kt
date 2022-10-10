@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +34,9 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         btn_eql.setOnClickListener {
-            number = obj.toRealNumber(number)
+            if(!checkRealNumInBinary(number)) {
+                number = obj.toRealNumber(number)
+            }
             txt_disp.setText(number)
         }
 
@@ -48,5 +51,23 @@ class MainActivity2 : AppCompatActivity() {
         nav.setOnClickListener {
             startActivity(Intent (this, MainActivity::class.java))
         }
+    }
+
+    fun checkRealNumInBinary(num : String) : Boolean{
+        var status : Boolean = false
+        for(i in 0..num.length-1){
+            if(num.get(i) != '0' && num.get(i) != '1') {
+                status = true
+            }
+        }
+        if(status){
+            Toast.makeText(
+                this,
+                "Binary Number Cannot Be Contained Real Number",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+        return status
     }
 }
