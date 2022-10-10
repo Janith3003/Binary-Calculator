@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,7 +82,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_eql.setOnClickListener {
-            num = obj.toBinary(num)
+            if(num.length>10) {
+                Toast.makeText(this, "Cannot Convert More Than 10 Numbers", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                num = obj.toBinary(num)
+            }
             txt_disp.setText(num)
         }
 
