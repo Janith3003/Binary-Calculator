@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottem_navigation"
+    app:startDestination="@id/realNumberConverterFragment">
+    <fragment
+        android:id="@+id/realNumberConverterFragment"
+        android:name="com.example.bottommenu.RealNumberConverterFragment"
+        android:label="fragment_real_number_converter"
+        tools:layout="@layout/fragment_real_number_converter" />
+    <fragment
+        android:id="@+id/binaryConvertorFragment"
+        android:name="com.example.bottommenu.BinaryConvertorFragment"
+        android:label="fragment_binary_convertor"
+        tools:layout="@layout/fragment_binary_convertor" />
+</navigation>
