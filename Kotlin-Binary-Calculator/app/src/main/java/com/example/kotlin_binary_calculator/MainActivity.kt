@@ -85,9 +85,8 @@ class MainActivity : AppCompatActivity() {
             if(num.length>10) {
                 Toast.makeText(this, "Cannot Convert More Than 10 Numbers", Toast.LENGTH_SHORT).show()
             }
-            else if (num.length==0) {
-                num="0"
-                num = obj.toBinary(num)
+            else if (num.length==0 || num == "0") {
+                num = "0"
             }
             else {
                 num = obj.toBinary(num)
