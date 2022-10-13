@@ -4,10 +4,12 @@
     <item
         android:id="@+id/realNumberConverterFragment"
         android:title="Real Number Convertor"
+        android:icon="@drawable/ic_baseline_123_24"
         />
 
     <item
         android:id="@+id/binaryConvertorFragment"
         android:title="Binary Convertor"
+        android:icon="@drawable/binary_code_svgrepo_com"
         />
 </menu>
