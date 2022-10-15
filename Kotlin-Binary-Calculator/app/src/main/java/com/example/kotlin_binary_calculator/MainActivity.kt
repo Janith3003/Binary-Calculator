@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                 num = "0"
             }
             else {
-                num = obj.toBinary(num)
+                num = obj.decimalToBinary(num)
             }
             txt_disp.setText(num)
         }

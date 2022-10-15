@@ -35,7 +35,7 @@ class MainActivity2 : AppCompatActivity() {
 
         btn_eql.setOnClickListener {
             if(!checkRealNumInBinary(number)) {
-                number = obj.toRealNumber(number)
+                number = obj.binaryToDecimal(number)
             }
             txt_disp.setText(number)
         }

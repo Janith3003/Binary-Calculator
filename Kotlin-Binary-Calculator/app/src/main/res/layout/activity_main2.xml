@@ -35,7 +35,7 @@
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/aqua"
             android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
-            android:text="Real Number Convertor"
+            android:text="Decimal Convertor"
             android:textColor="@color/black"
             app:layout_column="0"
             app:layout_columnSpan="@integer/material_motion_duration_long_2"

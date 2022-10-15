@@ -2,7 +2,7 @@ package com.example.kotlin_binary_calculator
 
 class CalculatorLogic {
 
-    fun toBinary (num : String) : String {
+    fun decimalToBinary (num : String) : String {
         var number : Int = num.toInt()
         var numx : Int = 0
         var data = ArrayList<Int>()
@@ -21,7 +21,7 @@ class CalculatorLogic {
         return rnum
     }
 
-    fun toRealNumber (num : String): String {
+    fun binaryToDecimal (num : String): String {
         //multiplicator( 1, 2, 4 ,8...)
         var pos : Int = 1
         var total : Int = 0
