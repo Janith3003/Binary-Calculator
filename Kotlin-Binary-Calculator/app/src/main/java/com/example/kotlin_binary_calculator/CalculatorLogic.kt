@@ -63,4 +63,21 @@ class CalculatorLogic {
         return (total.toString());
     }
 
+    // 0 <= number <= 7
+    fun octalToDecimal (num : String) : String {
+        var pos : Int = 1   // ( 1, 8, 64...)
+        var total : Int = 0
+
+        // turn upside down octal number
+        for(c in (1..num.length).reversed())
+        {
+            // calculate real number
+            var numtemp = Character.getNumericValue(num.get(c-1));
+            total = total + pos * numtemp;
+            pos *= 8;
+
+        }
+        return (total.toString());
+    }
+
 }
