@@ -21,6 +21,25 @@ class CalculatorLogic {
         return rnum
     }
 
+    fun decimalToOctal (num : String) : String {
+        var number : Int = num.toInt()
+        var numx : Int = 0
+        var data = ArrayList<Int>()
+        var rnum : String = ""
+
+        while (number != 0) {
+            numx = number%8
+            number = number/8
+            data.add(numx)
+        }
+
+        for (i in (0..data.size-1).reversed()) {
+            rnum += data.get(i).toString()
+        }
+
+        return rnum
+    }
+
     fun binaryToDecimal (num : String): String {
         //multiplicator( 1, 2, 4 ,8...)
         var pos : Int = 1
@@ -37,7 +56,7 @@ class CalculatorLogic {
             }
             else{
                 total = total + pos * numtemp;
-                pos = pos * 2;
+                pos *= 2;
             }
 
         }
