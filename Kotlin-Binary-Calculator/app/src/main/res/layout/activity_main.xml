@@ -69,7 +69,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.941"
-        tools:ignore="MissingConstraints">
+        tools:ignore="DuplicateIds,MissingConstraints">
 
         <Button
 
@@ -247,6 +247,7 @@
         android:id="@+id/btn_eql"
         android:layout_width="94dp"
         android:layout_height="42dp"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="0dp"
         android:backgroundTint="@color/orange"
