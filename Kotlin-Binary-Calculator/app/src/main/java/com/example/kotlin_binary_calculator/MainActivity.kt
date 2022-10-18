@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val nav = findViewById<Button>(R.id.bc)
         val txt_disp = findViewById<TextView>(R.id.txt_disp)
+        val txt_disp_octal = findViewById<TextView>(R.id.txt_disp_octal)
         val btn_no0 = findViewById<Button>(R.id.btn_no0)
         val btn_no1 = findViewById<Button>(R.id.btn_no1)
         val btn_no2 = findViewById<Button>(R.id.btn_no2)
@@ -89,6 +90,7 @@ class MainActivity : AppCompatActivity() {
                 num = "0"
             }
             else {
+                txt_disp_octal.setText(obj.decimalToOctal(num))
                 num = obj.decimalToBinary(num)
             }
             txt_disp.setText(num)
@@ -102,6 +104,7 @@ class MainActivity : AppCompatActivity() {
         btn_cls.setOnClickListener {
             num = ""
             txt_disp.setText(num)
+            txt_disp_octal.setText("")
         }
 
         nav.setOnClickListener {
